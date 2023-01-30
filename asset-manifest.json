@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/aradox-final/static/css/main.f2fe7a0f.css",
+    "main.js": "/aradox-final/static/js/main.e5216746.js",
+    "static/js/787.4699aa10.chunk.js": "/aradox-final/static/js/787.4699aa10.chunk.js",
+    "static/media/Anirudh Mahesh.png": "/aradox-final/static/media/Anirudh Mahesh.e739adc493b8b569e973.png",
+    "static/media/Full Logo White (3).png": "/aradox-final/static/media/Full Logo White (3).9eb7aa6620154d3680e6.png",
+    "static/media/Half Logo black.png": "/aradox-final/static/media/Half Logo black.8e95344aed7a91a051aa.png",
+    "static/media/Half Logo white.png": "/aradox-final/static/media/Half Logo white.a075332ee04d5830b0f3.png",
+    "index.html": "/aradox-final/index.html",
+    "static/media/logo.svg": "/aradox-final/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.f2fe7a0f.css.map": "/aradox-final/static/css/main.f2fe7a0f.css.map",
+    "main.e5216746.js.map": "/aradox-final/static/js/main.e5216746.js.map",
+    "787.4699aa10.chunk.js.map": "/aradox-final/static/js/787.4699aa10.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f2fe7a0f.css",
+    "static/js/main.e5216746.js"
+  ]
+}
