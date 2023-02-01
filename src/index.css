@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+overflow-x: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+
+  .sticky {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+  }
+  .contact{
+  transition: all 0.2s;
+  }
+body{
+  background: rgb(2, 3, 16);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+a{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+h1{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+
+
+}
+div{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+span{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+p{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.holder{
+  position: sticky;
+  top: 5vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.line{
+  transition: width 1.5s;
+}
+#black{
+position:relative;
+  left: 0;
+  top: auto;
+  right: 0;
+  bottom: -3%;
+  z-index: 2;
+
+  margin-bottom: 12vh;
+  background-image: -webkit-gradient(linear,left bottom,left top,color-stop(28%,#020310),to(transparent));
+  background-image: linear-gradient(360deg,#020310 28%,transparent);
+}
+.animation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  width: 120px;
+}
+.icon{
+  transition: all 0.2s;
+}
+
+.loader-wrapper {
+  background-color: #ebeaec;
+  width: 220px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-top: 33px;
+}
+
+.handle {
+  height: 11px;
+  background-color: #ff9100;
+  border-radius: 4px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #020310;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ff9100;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
