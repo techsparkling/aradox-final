@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { ToastContainer, toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 import Header from './Components/Header';
 import Hero from './Components/Hero';
 import Quote from './Components/Quote';
@@ -9,6 +11,8 @@ import Solution from './Components/Solution';
 import Process from './Components/Process';
 import Price from './Components/Price';
 import Vision from './Components/Vision';
+import 'swiper/swiper-bundle.css';
+import SwiperCore, { Autoplay } from 'swiper';
 import { Loading } from './Components/Loading';
 import { Fade, Slide } from 'react-awesome-reveal';
 import FAQ from './Components/FAQ';
@@ -17,6 +21,8 @@ import Contact from './Components/Contact';
 import Footer from './Components/Footer';
 
 function App() {
+  
+  SwiperCore.use([Autoplay])
  setTimeout(()=>{
   document.getElementById('loader').style.display="none"
   document.getElementById('content').style.display="block"
@@ -24,7 +30,21 @@ function App() {
  ,3500)
 
   return (
+  
     <div className="App">
+        <ToastContainer
+position="bottom-left"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="colored"
+/>
              <Contact></Contact>
              
       <Fade>
@@ -50,6 +70,7 @@ function App() {
 
 </div>
     </div>
+ 
   );
 }
 

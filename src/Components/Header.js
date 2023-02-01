@@ -54,20 +54,21 @@ const Header = () => {
         }}
       >
     <header className="mt-6  p-5 pr-2  pt-0 ">
-      <div className="hidden md:block">
+      <div className=" block">
       <img src={LogoWhite} className="w-[120px]"></img>
       </div>
-      <div className="md:hidden mb-1">
-      <img src={SmallLogoWhite} className="w-[70px]"></img>
-      </div>
+     
     </header>
     <Divider orientation="vertical" variant="middle" flexItem bgcolor="gray" sx={{ bgcolor: "gray" , length:'1px'}} />
-    {/* <div className="text-white ml-20 font-[400] hidden md:block">
-    <a>About</a>
-    <a className="ml-5">Services</a>
-    <a className="ml-5">Price</a>
-    <a className="ml-5">Contact</a>
-  </div> */}
+    <div className="text-white ml-20 font-[400] hidden md:block">
+   <a href="#about">About</a>
+    <a href="#process"className="ml-5">Process</a>
+    <a href="#price" className="ml-5">Price</a>
+    <a  onClick={()=>{
+          setGlobalState('requested',true)
+          setGlobalState('subject','none')
+        }} className="ml-5">Contact</a>
+  </div>
   <div className="absolute right-5 md:right-10 ">
 <IconButton         onClick={handleClick}
             size="small"

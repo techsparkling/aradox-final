@@ -63,24 +63,28 @@ export default function FAQ() {
   setTimeout(() => {
     if (line0) {
       document.getElementById("line0").style.width = "100%";
-    } else {
-        document.getElementById("line0").style.width = "0%";
-    }
+    } 
+    // else {
+    //     document.getElementById("line0").style.width = "0%";
+    // }
     if (line1) {
         document.getElementById("line1").style.width = "100%";
-    } else {
-        document.getElementById("line1").style.width = "0%";
-    }
+    } 
+    // else {
+    //     document.getElementById("line1").style.width = "0%";
+    // }
     if (line2) {
         document.getElementById("line2").style.width = "100%";
-    } else {
-        document.getElementById("line2").style.width = "0%";
-    }
+    } 
+    // else {
+    //     document.getElementById("line2").style.width = "0%";
+    // }
     if (line3) {
         document.getElementById("line3").style.width = "100%";
-      } else {
-        document.getElementById("line3").style.width = "0%";
-      }
+      } 
+      // else {
+      //   document.getElementById("line3").style.width = "0%";
+      // }
   }, 50);
 
   setTimeout(() => {
@@ -118,8 +122,7 @@ export default function FAQ() {
         </h1>
         <div className="w-full flex justify-center">
           <p className="mt-5 p-5 md:w- text-[20px] md:w-1/2">
-            Eu feugiat pretium nibh ipsum consequat nisl. Aenean sed adipiscing
-            diam donec adipiscing tristique risus.
+         To guide you in the world of Digital Marketing
           </p>
         </div>
         <div className="p-5 md:p-28">
@@ -129,8 +132,8 @@ export default function FAQ() {
               setQuestion1(!question1);
             }}
           >
-            <div className="w-1/2">
-              <h1 className="font-[900] text-[25px] text-left ">Question 1</h1>
+            <div className=" md:w-1/2 ">
+              <h1 className="font-[900] text-[25px] text-left">What are the benefits of using digital media for marketing?</h1>
             </div>
             <div className="w-1/2 text-right ">
               <KeyboardArrowDownIcon
@@ -143,8 +146,7 @@ export default function FAQ() {
           <Collapse in={question1}>
             <Box className="p-5 pt-0 ">
               <h1 className="text-left text-[20px]">
-                Eu feugiat pretium nibh ipsum consequat nisl. Aenean sed
-                adipiscing diam donec adipiscing tristique risus.
+              Benefits of using digital media for marketing include increased reach, lower costs, more precise targeting, and the ability to track and measure results.
               </h1>
             </Box>
           </Collapse>
@@ -162,7 +164,7 @@ export default function FAQ() {
             }}
           >
             <div className="w-1/2">
-              <h1 className="font-[900] text-[25px] text-left ">Question 2</h1>
+              <h1 className="font-[900] text-[25px] text-left ">What is the role of digital media in marketing?</h1>
             </div>
             <div className="w-1/2 text-right ">
               <KeyboardArrowDownIcon
@@ -175,8 +177,7 @@ export default function FAQ() {
           <Collapse in={question2}>
             <Box className="p-5 pt-0 ">
               <h1 className="text-left text-[20px]">
-                Eu feugiat pretium nibh ipsum consequat nisl. Aenean sed
-                adipiscing diam donec adipiscing tristique risus.
+              Digital media plays a critical role in marketing as it allows companies to reach a wider audience through targeted and personalized campaigns.
               </h1>
             </Box>
           </Collapse>
@@ -190,7 +191,7 @@ export default function FAQ() {
             }}
           >
             <div className="w-1/2">
-              <h1 className="font-[900] text-[25px] text-left ">Question 3</h1>
+              <h1 className="font-[900] text-[25px] text-left ">Is digital marketing worth it?</h1>
             </div>
             <div className="w-1/2 text-right ">
               <KeyboardArrowDownIcon
@@ -203,8 +204,7 @@ export default function FAQ() {
           <Collapse in={question3}>
             <Box className="p-5 pt-0 ">
               <h1 className="text-left text-[20px]">
-                Eu feugiat pretium nibh ipsum consequat nisl. Aenean sed
-                adipiscing diam donec adipiscing tristique risus.
+              Yes it is. its far more effective than traditional marketing and cost effective.
               </h1>
             </Box>
           </Collapse>
@@ -218,7 +218,7 @@ export default function FAQ() {
             }}
           >
             <div className="w-1/2">
-              <h1 className="font-[900] text-[25px] text-left ">Question 4</h1>
+              <h1 className="font-[900] text-[25px] text-left ">How is it going to suit us?</h1>
             </div>
             <div className="w-1/2 text-right ">
               <KeyboardArrowDownIcon
@@ -231,8 +231,8 @@ export default function FAQ() {
           <Collapse in={question4}>
             <Box className="p-5 pt-0 ">
               <h1 className="text-left text-[20px]">
-                Eu feugiat pretium nibh ipsum consequat nisl. Aenean sed
-                adipiscing diam donec adipiscing tristique risus.
+                Contact Us
+              and we will discuss how digital marketing can help you.
               </h1>
             </Box>
           </Collapse>

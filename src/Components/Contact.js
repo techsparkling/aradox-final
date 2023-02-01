@@ -16,7 +16,13 @@ import Select from '@mui/material/Select';
 import { setGlobalState,useGlobalState } from "./global";
 import EmailIcon from '@mui/icons-material/Email';
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+import { toast } from "react-toastify";
+import { initializeApp } from "firebase/app";
+import { getDatabase, push, ref, set } from "firebase/database";
+import {firebaseConfig} from "./firebaseconfig";
+const app = initializeApp(firebaseConfig);
 
+const database = getDatabase(app);
 export default function Contact(){
     const requested=useGlobalState("requested")[0]
     const subject=useGlobalState('subject')
@@ -24,7 +30,34 @@ export default function Contact(){
    const[select,setSelect]=useState('')
    const [email,setEmail]=useState('')
    const [message,setMessage]=useState('')
+   
 
+
+   function ValidateEmail(email) 
+   {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+     {
+       return (true)
+     }
+      else{
+       return (false)}
+   }
+   function checkname(name){
+    if(name!==""){
+      return (true)
+    }
+    else{
+      return(false)
+    }
+   }
+   function checkmessage(message){
+    if(message!==""){
+      return (true)
+    }
+    else{
+      return(false)
+    }
+   }
 useEffect(()=>{
  
    if(subject[0]==20){
@@ -35,6 +68,12 @@ useEffect(()=>{
    }
    else if(subject[0]==30){
     setSelect(30)
+   }
+   else if(subject[0]==40){
+    setSelect(40)
+   }
+   else if(subject[0]==50){
+    setSelect(50)
    }
    else if(subject[0]=='none'){
     setSelect('none')
@@ -153,14 +192,13 @@ setEmail(event.target.value)
           label="Subject"
    fullWidth
         >
-          <MenuItem value="none"
-         
-          >
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+        
+          <MenuItem value="none">General Inquiry</MenuItem>
+          <MenuItem value={10}>Regarding Free Plan Request</MenuItem>
+          <MenuItem value={20}>Regarding Custom Plan Request</MenuItem>
+          <MenuItem value={30}>Regarding Beginner Plan Request</MenuItem>
+          <MenuItem value={40}>Regarding Intermediate Plan Request</MenuItem>
+          <MenuItem value={50}>Regarding Advanced Plan Request</MenuItem>
         </Select>
         </FormControl>
         </div>
@@ -187,7 +225,49 @@ setMessage(event.target.value)
       },
     },
   }}></TextField>
-  <Button  sx={{
+  <Button onClick={()=>{
+   if(ValidateEmail(email)&& checkname(name) && checkmessage(message)){
+    let subject
+    if(select=="none"){
+    subject="General Inquiry"
+  
+    }
+    else if(select==10){
+      subject="Regarding Free Plan Request"
+    }
+    else if(select==20){
+      subject="Regarding Custom Plan Request"
+    }
+    else if(select==30){
+      subject="Regarding Beginner Plan Request"
+    }
+    else if(select==40){
+      subject="Regarding Intermediate Plan Request"
+    }
+    else if(select==50){
+      subject="Regarding Advanced Plan Request"
+    }
+    push(ref(database, 'new/'), {
+      username: name,
+      email: email,
+      message:message,
+      subject:subject,
+    }).then(()=>{
+      toast.success("Message Sent. You will get a reply shortly")
+    })
+   
+  }
+    
+   
+  
+  
+   else if(!ValidateEmail(email)&& email!==""){
+    toast.error("Check your Email Id.")
+   }
+   else if( !checkname(name) && !checkmessage(message)){
+    toast.error("Make sure to fill in all the fields.")
+   }
+  }}  sx={{
     color:"white",
     border:"1px solid #ff9100",
     background:"#ff9100",
@@ -210,12 +290,17 @@ setMessage(event.target.value)
     <Chip label="Find Us On" />
   </Divider>
   <div className="gap-5 w-full mt-5 flex justify-center place-content-center">
-        <IconButton><WhatsAppIcon></WhatsAppIcon></IconButton>
-    <IconButton><InstagramIcon></InstagramIcon></IconButton>
-    
-    <IconButton><TwitterIcon></TwitterIcon></IconButton>
+    <a href="tel:9790746705">
+  <IconButton><PhoneIcon></PhoneIcon></IconButton></a>
+  <a href="https://wa.me/9790746705">
+        <IconButton><WhatsAppIcon></WhatsAppIcon></IconButton></a>
+        <a href="https://www.instagram.com/aradoxmedia/?igshid=MDM4ZDc5MmU%3D">
+    <IconButton><InstagramIcon></InstagramIcon></IconButton></a>
+    <a href="mailto:aradoxthecompany@gmail.com">
+    <IconButton><EmailIcon></EmailIcon></IconButton></a>
+    <a href="https://www.linkedin.com/company/aradox-media/">
     <IconButton><LinkedInIcon></LinkedInIcon></IconButton>
-
+    </a>
   </div>
 
   </div>

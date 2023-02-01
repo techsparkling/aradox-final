@@ -8,24 +8,21 @@ export default function Quote(){
     return(
         <div>
           <Fade  duration={2000}>
-            <div className="p-10 bg-[#ff9100] text-white font-[900+] flex justify-center" >
-            <FontAwesomeIcon icon={faQuoteLeft}></FontAwesomeIcon>
-            <AnimatedText
-    type='words'
-    interval={0.0100}
-    className="text-[30px] md:text-[40px]"
-    duration={0.8}
-    animation={{
-      ease: 'ease',
-    }}
-  >
+            <div className="p-12 bg-[#ff9100] text-white font-[900+] md:flex justify-left" >
+            
+          
  
-We turn clicks into customers, and customers into loyal brand ambassadors.
-</AnimatedText>
-<FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>   
+ <h1   className="text-[30px] md:text-[30px] ">Our goal is to do marketing right. In Aradox we believe in understanding your business and handout right messages to right person at the right time. We help you to go omnichannel and easily scale your business with just few taps on the screen. <span>
+
+ </span>
+ </h1>
+
+
            
             </div>
+            <FontAwesomeIcon icon={faQuoteRight}></FontAwesomeIcon>   
             </Fade>
+            
         </div>
     )
 }
