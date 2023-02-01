@@ -290,7 +290,7 @@ setMessage(event.target.value)
     <Chip label="Find Us On" />
   </Divider>
   <div className="gap-5 w-full mt-5 flex justify-center place-content-center">
-    <a href="tel:9790746705">
+    <a href="tel:+919790746705">
   <IconButton><PhoneIcon></PhoneIcon></IconButton></a>
   <a href="https://wa.me/9790746705">
         <IconButton><WhatsAppIcon></WhatsAppIcon></IconButton></a>
